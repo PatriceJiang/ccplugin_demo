@@ -1,2 +1,4 @@
 build-android
 build-windows
+build-ios
+build-mac

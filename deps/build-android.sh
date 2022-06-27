@@ -42,3 +42,11 @@ cmake -S. -Bbuild-android/$arch \
 cmake --build build-android/$arch --target install
 
 done
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    find build-android -name "*.a" -exec $ndk_path/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-strip -S {} \;
+elif [[ "$OSTYPE" == "msys" ]]; then
+    find build-android -name "*.a" -exec $ndk_path/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-strip.exe -S {} \;
+else
+    echo "skip strip archives"
+fi
