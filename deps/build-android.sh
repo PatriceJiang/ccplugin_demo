@@ -36,7 +36,6 @@ cmake -S. -Bbuild-android/$arch \
     -DANDROID_ABI=$arch \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=dist/android/$arch \
-    -DCMAKE_INSTALL_DO_STRIP=1 \
     -G "$GENERATER" $MAKE_BIN 
 
 cmake --build build-android/$arch --target install
