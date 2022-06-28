@@ -5,12 +5,7 @@ project(AES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 
-
-if("${CMAKE_SYSTEM_NAME}" STREQUAL "Windows")
-    add_library(AES SHARED src/AES.cpp)
-else()
-    add_library(AES src/AES.cpp)
-endif()
+add_library(AES src/AES.cpp)
 
 target_include_directories(AES PRIVATE
     include)
