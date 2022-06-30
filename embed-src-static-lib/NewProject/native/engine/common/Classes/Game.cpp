@@ -46,7 +46,7 @@ int Game::init() {
 #if CC_DEBUG
   _debuggerInfo.enabled = true;
 #else
-  _debuggerInfo.enabled = true;
+  _debuggerInfo.enabled = false;
 #endif
   _debuggerInfo.port = 6086;
   _debuggerInfo.address = "0.0.0.0";
