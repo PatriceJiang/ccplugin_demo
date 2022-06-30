@@ -2,7 +2,7 @@
 
 set -x
 set -e
-rm -rf build-windows
+#rm -rf build-windows
 rm -rf dist/windows
 cmake -B build-windows \
     -DCMAKE_INSTALL_PREFIX=dist/windows \

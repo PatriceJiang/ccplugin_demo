@@ -24,7 +24,7 @@ else
     MAKE_BIN=""
 fi
 
-rm -rf build-android
+#rm -rf build-android
 rm -rf dist/android
 
 for arch in armeabi-v7a arm64-v8a x86 x86_64 
