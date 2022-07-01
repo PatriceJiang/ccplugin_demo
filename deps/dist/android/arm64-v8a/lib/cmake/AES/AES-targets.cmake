@@ -59,7 +59,7 @@ set_target_properties(AES PROPERTIES
 
 # Load information for each installed configuration.
 get_filename_component(_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
-file(GLOB CONFIG_FILES "${_DIR}/AES-targets-*.cmake")
+file(GLOB CONFIG_FILES "${_DIR}/aes-targets-*.cmake")
 foreach(f ${CONFIG_FILES})
   include(${f})
 endforeach()

@@ -22,27 +22,27 @@ install(TARGETS AES
     )
 
 install(TARGETS AES
-    EXPORT AES-targets
-    #ARCHIVE DESTINATION lib/cmake/AES
+    EXPORT aes-targets
+    #ARCHIVE DESTINATION lib/cmake/aes
     )
-install(EXPORT AES-targets
-    FILE AES-targets.cmake
-    DESTINATION lib/cmake/AES
+install(EXPORT aes-targets
+    FILE aes-targets.cmake
+    DESTINATION lib/cmake/aes
 )
 
 include(CMakePackageConfigHelpers)
 
 configure_package_config_file(
     ${CMAKE_CURRENT_LIST_DIR}/Config-aes.cmake.in
-    ${CMAKE_CURRENT_BINARY_DIR}/AES-config.cmake
-    INSTALL_DESTINATION "lib/cmake/AES"
+    ${CMAKE_CURRENT_BINARY_DIR}/aes-config.cmake
+    INSTALL_DESTINATION "lib/cmake/aes"
     NO_SET_AND_CHECK_MACRO
     NO_CHECK_REQUIRED_COMPONENTS_MACRO
     )
 
 install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/AES-config.cmake
-    DESTINATION lib/cmake/AES
+    ${CMAKE_CURRENT_BINARY_DIR}/aes-config.cmake
+    DESTINATION lib/cmake/aes
     )
 
 

@@ -4,7 +4,7 @@
 ####### Any changes to this file will be overwritten by the next CMake run ####
 ####### The input file was Config.cmake.in                            ########
 
-get_filename_component(PACKAGE_PREFIX_DIR "${CMAKE_CURRENT_LIST_DIR}/../../../" ABSOLUTE)
+get_filename_component(PACKAGE_PREFIX_DIR "${CMAKE_CURRENT_LIST_DIR}/../../" ABSOLUTE)
 
 ####################################################################################
 
