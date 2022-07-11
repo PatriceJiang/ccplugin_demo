@@ -1,11 +1,9 @@
+set(_LIB_AES_ROOT ${CMAKE_CURRENT_LIST_DIR}/../../..)
 
 
-####### Expanded from @PACKAGE_INIT@ by configure_package_config_file() #######
-####### Any changes to this file will be overwritten by the next CMake run ####
-####### The input file was Config-aes.cmake.in                            ########
+add_library(aes STATIC IMPORTED GLOBAL)
 
-get_filename_component(PACKAGE_PREFIX_DIR "${CMAKE_CURRENT_LIST_DIR}/../../../" ABSOLUTE)
-
-####################################################################################
-
-include("${CMAKE_CURRENT_LIST_DIR}/AES-targets.cmake")
+set_target_properties(aes PROPERTIES
+    INTERFACE_INCLUDE_DIRECTORIES "${_LIB_AES_ROOT}/include"
+    IMPORTED_LOCATION "${_LIB_AES_ROOT}/lib/libAES.a"
+)

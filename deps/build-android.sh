@@ -45,6 +45,7 @@ rm -rf dist/android
 
 for arch in armeabi-v7a arm64-v8a x86 x86_64 
 do
+## compile libraries
 mkdir -p build-android/$arch
 cmake -S. -Bbuild-android/$arch \
     -DCMAKE_TOOLCHAIN_FILE="$ndk_path/build/cmake/android.toolchain.cmake" \
@@ -53,11 +54,22 @@ cmake -S. -Bbuild-android/$arch \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=dist/android/$arch \
     -DCMAKE_DEBUG_POSTFIX=d \
+    -DUSE_CCACHE=ON \
     -G "$GENERATER" $MAKE_BIN 
 
+## install headers & static libraries
 cmake --build build-android/$arch --target install
 
+## copy <PackageName>-config.cmake
+mkdir -p dist/android/$arch/lib/cmake/aes_glue
+mkdir -p dist/android/$arch/lib/cmake/aes
+cp android-aes_glue-config.cmake  dist/android/$arch/lib/cmake/aes_glue/aes_glue-config.cmake
+cp android-aes-config.cmake  dist/android/$arch/lib/cmake/aes/aes-config.cmake
+
 done
+
+## strip static libraries
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
     find build-android -name "*.a" -exec $ndk_path/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-strip -S {} \;
 elif [[ "$OSTYPE" == "msys" ]]; then

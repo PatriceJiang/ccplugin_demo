@@ -6,7 +6,7 @@
     "modules":[
         {
             "target":"aes_glue",
-            "depends":["AES"]
+            "depends":["aes"]
         }
     ],
     "support-platforms":["android","windows"]
