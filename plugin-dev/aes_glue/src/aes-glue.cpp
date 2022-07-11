@@ -1,8 +1,8 @@
 
 #include "AES.h"
-#include "cocos/bindings/sebind/sebind.h"
-#include "cocos/plugins/bus/EventBus.h"
-#include "cocos/plugins/Plugins.h"
+#include "bindings/sebind/sebind.h"
+#include "plugins/bus/EventBus.h"
+#include "plugins/Plugins.h"
 
 namespace {
 
