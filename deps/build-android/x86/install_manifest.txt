@@ -1,2 +1,0 @@
-/Volumes/Removable/Github/ccplugin_demo/deps/dist/android/x86/lib/libAES.a
-/Volumes/Removable/Github/ccplugin_demo/deps/dist/android/x86/include/AES.h
