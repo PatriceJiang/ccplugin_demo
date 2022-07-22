@@ -1,0 +1,7 @@
+/Volumes/Removable/Github/ccplugin_demo/deps/build-mac/arm64/CMakeFiles/install/local.dir
+/Volumes/Removable/Github/ccplugin_demo/deps/build-mac/arm64/CMakeFiles/install/strip.dir
+/Volumes/Removable/Github/ccplugin_demo/deps/build-mac/arm64/CMakeFiles/install.dir
+/Volumes/Removable/Github/ccplugin_demo/deps/build-mac/arm64/CMakeFiles/list_install_components.dir
+/Volumes/Removable/Github/ccplugin_demo/deps/build-mac/arm64/CMakeFiles/rebuild_cache.dir
+/Volumes/Removable/Github/ccplugin_demo/deps/build-mac/arm64/CMakeFiles/edit_cache.dir
+/Volumes/Removable/Github/ccplugin_demo/deps/build-mac/arm64/CMakeFiles/AES.dir

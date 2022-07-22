@@ -1,0 +1,2 @@
+/Volumes/Removable/Github/ccplugin_demo/deps/build-ios/install/arm64/lib/libAES.a
+/Volumes/Removable/Github/ccplugin_demo/deps/build-ios/install/arm64/include/AES.h

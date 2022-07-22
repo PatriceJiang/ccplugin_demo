@@ -1,0 +1,7 @@
+/Volumes/Removable/Github/ccplugin_demo/deps/build-android/arm64-v8a/CMakeFiles/install/local.dir
+/Volumes/Removable/Github/ccplugin_demo/deps/build-android/arm64-v8a/CMakeFiles/install/strip.dir
+/Volumes/Removable/Github/ccplugin_demo/deps/build-android/arm64-v8a/CMakeFiles/install.dir
+/Volumes/Removable/Github/ccplugin_demo/deps/build-android/arm64-v8a/CMakeFiles/list_install_components.dir
+/Volumes/Removable/Github/ccplugin_demo/deps/build-android/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Volumes/Removable/Github/ccplugin_demo/deps/build-android/arm64-v8a/CMakeFiles/edit_cache.dir
+/Volumes/Removable/Github/ccplugin_demo/deps/build-android/arm64-v8a/CMakeFiles/AES.dir

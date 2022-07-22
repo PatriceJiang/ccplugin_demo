@@ -23,7 +23,8 @@ install(TARGETS hello_cocos
 ###################### target: aes_glue
 
 # include cocos-engine, replace with engine path
-set(COCOS_X_PATH i:/Github/editor-3d/resources/3d/engine/native)
+#set(COCOS_X_PATH i:/Github/editor-3d/resources/3d/engine/native)
+set(COCOS_X_PATH /Volumes/Removable/Github/editor-3d/resources/3d/engine/native)
 include(${COCOS_X_PATH}/CMakeLists.txt)
 
 

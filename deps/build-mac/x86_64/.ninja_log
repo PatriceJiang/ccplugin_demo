@@ -1,0 +1,4 @@
+# ninja log v5
+0	333	1656316372855312577	CMakeFiles/AES.dir/src/AES.cpp.o	85b0c26ba273ebc7
+334	349	1656316372873992000	libAES.a	3141741cea766420
+349	359	0	CMakeFiles/install.util	5f74c01a7de80984
