@@ -32,7 +32,10 @@ std::vector<uint8_t> aesDecrypt(AES *aes, const std::vector<uint8_t> &data) {
 }
 
 } // namespace
+
+// export c++ methods to JS
 static bool register_aes(se::Object *ns) {
+
   sebind::class_<AES> klass("AES");
 
   klass.constructor()
@@ -52,5 +55,9 @@ void add_aes_glue() {
   });
 }
 
-
+/**
+ * Regist a new cc plugin entry function
+ * first  param: should match the name in cc_plugin.json
+ * second param: callback when engine initialized
+ */ 
 CC_PLUGIN_ENTRY(aes_glue, add_aes_glue);

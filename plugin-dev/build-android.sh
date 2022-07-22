@@ -48,9 +48,18 @@ do
 ## compile libraries
 # rm -rf build-android/$arch
 mkdir -p build-android/$arch
+
+if [ $arch == "armeabi-v7a" ]; 
+then
+    CXX_FLAGS="-mfpu=neon-fp16"
+else
+    CXX_FLAGS=""
+fi
+
 cmake -S. -Bbuild-android/$arch \
     -DCMAKE_TOOLCHAIN_FILE="$ndk_path/build/cmake/android.toolchain.cmake" \
     -DANDROID_PLATFORM=android-21 \
+    -DCMAKE_CXX_FLAGS="$CXX_FLAGS" \
     -DANDROID_ABI=$arch \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=dist/android/$arch \
@@ -60,11 +69,6 @@ cmake -S. -Bbuild-android/$arch \
 ## install headers & static libraries
 cmake --build build-android/$arch --target install
 
-## copy <PackageName>-config.cmake
-mkdir -p dist/android/$arch/lib/cmake/aes_glue
-mkdir -p dist/android/$arch/lib/cmake/aes
-cp android-aes_glue-config.cmake  dist/android/$arch/lib/cmake/aes_glue/aes_glue-config.cmake
-cp android-aes-config.cmake  dist/android/$arch/lib/cmake/aes/aes-config.cmake
 
 done
 
